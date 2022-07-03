@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.math.BigInteger;
 public class Bronze5575 {
 
 	public static void main(String[] args) {
@@ -24,6 +25,7 @@ public class Bronze5575 {
 			m+=60;
 			h--;
 		}
+		
 
 		System.out.println(h + " " + m + " " + s);
 		
