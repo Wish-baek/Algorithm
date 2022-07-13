@@ -8,9 +8,11 @@ public class Bronze10409 {
 		int n = sc.nextInt();
 		int t = sc.nextInt();
 		int count = 0;
+		
 		for(int i = 0; i < n; i++) {
 			int a = sc.nextInt();
 			t-=a;
+			
 			if(t<=0) break;
 			count++;
 		}
