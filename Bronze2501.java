@@ -22,7 +22,8 @@ public class Bronze2501 {
 				p++;
 			}
 		}
-		System.out.println(arr[k-1]);
+		if(k>arr.length) System.out.println(0);
+		else System.out.println(arr[k-1]);
 	}
 		
 }
