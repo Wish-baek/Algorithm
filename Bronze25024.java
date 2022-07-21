@@ -10,7 +10,7 @@ public class Bronze25024 {
 			
 			int x = sc.nextInt();
 			int y = sc.nextInt();
-			if()
+			
 			if( x<24 && y<60) System.out.print("Yes");
 			else System.out.print("No");
 			
