@@ -41,7 +41,6 @@ public class Bronze1864 {
 						arr[i] = -1;
 						break;
 				}
-				
 			}
 			
 			int tmp = 0;
