@@ -12,3 +12,4 @@ public class Bronze23303 {
 	}
 
 }
+//https://www.acmicpc.net/problem/23303
