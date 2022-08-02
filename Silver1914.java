@@ -11,7 +11,6 @@ public class Silver1914 {
 		if(num==0) return;
 		hanoi(from, to, m, num-1);
 		System.out.println(from + " " + to);
-		cnt++;
 		hanoi(m, from, to, num-1);
 	}
 
