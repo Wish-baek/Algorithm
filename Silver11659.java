@@ -19,7 +19,6 @@ public class Silver11659 {
 			int x = Integer.valueOf(num[i-1]);
 			arr[i] = arr[i-1]+x;
 		}
-		int[] narr = new int[N+1];
 		
 		
 		for(int i = 0; i < M; i++) {
