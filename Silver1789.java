@@ -4,9 +4,10 @@ import java.io.InputStreamReader;
 
 public class Silver1789 {
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
 		long S = Long.valueOf(br.readLine());
 		
 		if(S==1) {
@@ -16,7 +17,8 @@ public class Silver1789 {
 		
 		long sum = 0;
 		long cnt = 0;
-		for(long i = 1; i < S; i++) {
+		
+		for(long i = 1; i <= S; i++) {
 			sum+=i;
 			cnt++;
 			if(sum>S) {
