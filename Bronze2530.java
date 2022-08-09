@@ -17,3 +17,4 @@ public class Bronze2530 {
 	}
 
 }
+//https://www.acmicpc.net/problem/25304
