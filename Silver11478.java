@@ -24,3 +24,4 @@ public class Silver11478 {
 	}
 
 }
+//https://www.acmicpc.net/problem/11478
