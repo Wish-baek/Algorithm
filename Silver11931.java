@@ -11,19 +11,18 @@ public class Silver11931 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		int N = Integer.parseInt(br.readLine());
-		
+
 		Integer[] arr = new Integer[N];
-		
-		for(int i = 0; i < N; i++) {
+
+		for (int i = 0; i < N; i++) {
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		Arrays.sort(arr);
 		Arrays.sort(arr, Comparator.reverseOrder());
-		
-		for( int num : arr )
+
+		for (int num : arr)
 			sb.append(num).append("\n");
 		System.out.println(sb);
 	}
-
-
 }
+//https://www.acmicpc.net/problem/11931
