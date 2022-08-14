@@ -18,7 +18,7 @@ public class Bronze16968 {
 		for (int i = 1; i < str.length(); i++) {
 			if (str.charAt(i - 1) == 'd' && str.charAt(i) == 'd')
 				arr[i] = 9;
-		
+
 			else if (str.charAt(i - 1) == 'c' && str.charAt(i) == 'c')
 				arr[i] = 25;
 			else if (str.charAt(i) == 'd')
@@ -26,15 +26,12 @@ public class Bronze16968 {
 			else if (str.charAt(i) == 'c')
 				arr[i] = 26;
 		}
-
 		int sum = 1;
 
 		for (int i = 0; i < str.length(); i++) {
 			sum *= arr[i];
 		}
 		System.out.println(sum);
-
 	}
-
 }
 //https://www.acmicpc.net/problem/16968
