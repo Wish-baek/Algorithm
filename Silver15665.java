@@ -64,4 +64,4 @@ public class Silver15665 {
 	}
 
 }
-//https://www.acmicpc.net/problem/15663
+//https://www.acmicpc.net/problem/15665
