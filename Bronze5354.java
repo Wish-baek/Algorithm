@@ -1,41 +1,33 @@
-import java.util.*;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Bronze5354 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
-		
-		for(int i = 0; i < t; i++) {
-			int n = sc.nextInt();
-			if(n==1) System.out.println("#");
-			else {for(int j = 0; j < n; j++) {
-				System.out.print("#");
-			}
-			System.out.println();
-			for(int k = 0; k < n-2; k++) {
-				
+	public static void main(String[] args) throws NumberFormatException, IOException {
 
-				System.out.print("#");
-				for(int p = 0; p < n-2; p++) {
-					System.out.print("J");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		int T = Integer.parseInt(br.readLine());
+		for (int tc = 0; tc < T; tc++) {
+
+			int N = Integer.parseInt(br.readLine());
+
+			for(int i = 0; i < N; i++) {
+				for(int j = 0; j < N; j++) {
+					if(i==0 || i==N-1||j==0||j==N-1) {
+						sb.append("#");
+					}
+					else sb.append("J");
 				}
-				
-				System.out.print("#");
-				System.out.println();
-				
+				sb.append("\n");
 			}
-			
-			for(int j = 0; j < n; j++) {
-				System.out.print("#");
-			}
-			if (i==t-1) break;
-			System.out.println();
-			System.out.println();
-			}
+			if (tc != T - 1)
+				sb.append("\n");
 		}
-		
+		System.out.print(sb);
+
 	}
+
 }
+//https://www.acmicpc.net/problem/5354
