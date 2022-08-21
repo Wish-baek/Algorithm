@@ -7,14 +7,17 @@ public class Silver1927 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder();
 		PriorityQueue<Integer> q = new PriorityQueue<>();
 		int n = Integer.parseInt(br.readLine());
-		for(int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			int tmp = Integer.parseInt(br.readLine());
-			if(tmp!=0) q.add(tmp);
-			else if(tmp==0 && q.isEmpty())sb.append(0).append("\n");
-			else sb.append(q.poll()).append("\n");
+			if (tmp != 0)
+				q.add(tmp);
+			else if (tmp == 0 && q.isEmpty())
+				sb.append(0).append("\n");
+			else
+				sb.append(q.poll()).append("\n");
 		}
 		System.out.println(sb);
 	}
