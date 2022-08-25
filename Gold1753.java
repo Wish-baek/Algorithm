@@ -63,7 +63,6 @@ public class Gold1753 {
 			else
 				System.out.println(visited[i]);
 		}
-
 	}
 
 	static void dijkstra(int s) {
