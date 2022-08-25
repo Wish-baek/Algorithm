@@ -56,9 +56,7 @@ public class Gold1753 {
 			Graph[a].add(new Node(b, w));
 		}
 
-		// for (int i = 1; i < V + 1; i++) {
 		dijkstra(K);
-		// }
 		for (int i = 1; i < V + 1; i++) {
 			if (visited[i] == Integer.MAX_VALUE)
 				System.out.println("INF");
@@ -72,7 +70,6 @@ public class Gold1753 {
 		PriorityQueue<Node> pq = new PriorityQueue<>();
 		pq.add(new Node(s, 0));
 		visited[s] = 0;
-		// int res = 0;
 		while (!pq.isEmpty()) {
 
 			Node node = pq.poll();
@@ -81,7 +78,6 @@ public class Gold1753 {
 				continue;
 
 			}
-			// if(node.to==f) return res;
 			for (int i = 0; i < Graph[node.to].size(); i++) {
 				Node newNode = Graph[node.to].get(i);
 
