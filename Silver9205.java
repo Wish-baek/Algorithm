@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 public class Silver9205 {
 	static List<Integer>[] Graph;
 	static boolean[] visited;
-	private static Silver9205.Node[] node;
+	private static Node[] node;
 	static int n;
 
 	static class Node {
@@ -25,6 +25,7 @@ public class Silver9205 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 		int t = Integer.parseInt(br.readLine());
 
@@ -46,7 +47,7 @@ public class Silver9205 {
 				Graph[i] = new ArrayList<>();
 			}
 
-			for (int i = 0; i < n + 2; i++) {
+			for (int i = 0; i < n + 1; i++) {
 				for (int j = i + 1; j < n + 2; j++) {
 					if (Math.abs(node[i].c - node[j].c) + Math.abs(node[i].r - node[j].r) <= 1000) {
 						Graph[i].add(j);
@@ -54,9 +55,10 @@ public class Silver9205 {
 					}
 				}
 			}
-			System.out.println(bfs());
+			sb.append(bfs()).append("\n");
 
 		}
+		System.out.print(sb);
 	}
 
 	static String bfs() {
