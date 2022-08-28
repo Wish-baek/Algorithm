@@ -44,7 +44,7 @@ public class Gold2589 {
 
 		Queue<int[]> q = new LinkedList<>();
 		q.add(new int[] { sr, sc });
-		visited[sr][sc] = 1;
+		visited[sr][sc] = 1; // 처음에도 방문체크 해줘야해서 1로 해놓고 나중에 -1;
 
 		while (!q.isEmpty()) {
 			int[] tmp = q.poll();
