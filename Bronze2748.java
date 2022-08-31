@@ -10,7 +10,6 @@ public class Bronze2748 {
 		dp = new long[91];
 
 		int n = Integer.parseInt(br.readLine());
-
 		dp[1] = 1;
 		System.out.println(fibo(n));
 	}
