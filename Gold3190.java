@@ -50,32 +50,23 @@ public class Gold3190 {
 		int d = 1;
 		time = 0;
 		while (true) {
-
-//			for(int i = 0; i<N;i++) {
-//				for(int j = 0; j<N;j++) {
-//					System.out.print(b[i][j] + " ");
-//				}System.out.println();
-//			}System.out.println();
-
 			time++;
-//			System.out.println(q.size());
 			int nr = q.peekFirst()[0] + dr[d];
 			int nc = q.peekFirst()[1] + dc[d];
-//			System.out.println(nr + " " + nc);
 			if (nr < 0 || nr >= N || nc < 0 || nc >= N) {
 				break;
 			}
 			int[] arr = { nr, nc };
 			int cnt = 0;
+
 			for (int[] a : q) {
 				if (cnt != 0) {
-
-//				System.out.println(a[0] + " " + nr + " " + a[1] + " " +nc);
 					if (arr[0] == a[0] && arr[1] == a[1])
 						return;
 				}
 				cnt++;
 			}
+
 			q.addFirst(new int[] { nr, nc });
 			if (board[nr][nc] == 2) {
 				board[nr][nc] = 0;
