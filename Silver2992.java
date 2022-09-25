@@ -1,42 +1,45 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Silver2992 {
+	static boolean[] visited;
+	static String[] arr;
+	static int X, min;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int X = Integer.parseInt(br.readLine());
+		X = Integer.parseInt(br.readLine());
+		arr = Integer.toString(X).split("");
 
-		char[] arr = Integer.toString(X).toCharArray();
-		Arrays.sort(arr);
-		int n = X + 1;
+		visited = new boolean[arr.length];
 
-		while (true) {
-			boolean ck = true;
-			char[] tmp = Integer.toString(n).toCharArray();
-			if (tmp.length != arr.length) {
-				System.out.println(0);
-				System.exit(0);
-			}
-			Arrays.sort(tmp);
-			for (int i = 0; i < tmp.length; i++) {
-				if (tmp[i] != arr[i]) {
-					ck = false;
-					break;
-				}
-			}
-//			System.out.println(ck);
-			if (ck == true) {
-				System.out.println(n);
-				System.exit(0);
-			}
-			n++;
+		min = Integer.MAX_VALUE;
+		perm(0, arr.length, "");
 
+//		Collections.sort(list);
+		if (min == Integer.MAX_VALUE)
+			System.out.println(0);
+		else
+			System.out.println(min);
+	}
+
+	static void perm(int depth, int r, String str) {
+		if (depth == r) {
+			int tmp = Integer.parseInt(str);
+			if (tmp > X)
+				min = Math.min(min, tmp);
+			return;
+		}
+
+		for (int i = 0; i < r; i++) {
+			if (!visited[i]) {
+				visited[i] = true;
+				perm(depth + 1, r, str + arr[i]);
+				visited[i] = false;
+			}
 		}
 
 	}
-
 }
 //https://www.acmicpc.net/problem/2992
