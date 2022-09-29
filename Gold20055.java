@@ -55,7 +55,6 @@ public class Gold20055 {
 				break;
 
 			round++;
-
 		}
 
 		System.out.println(round);
