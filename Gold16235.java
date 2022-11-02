@@ -96,7 +96,6 @@ public class Gold16235 {
 
 			}
 		}
-		System.out.println(pq.size());
 		pq = new PriorityQueue<>(tmp);
 	}
 
