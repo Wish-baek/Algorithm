@@ -39,7 +39,7 @@ public class Gold16197 {
 		}
 
 		result = Integer.MAX_VALUE;
-		dfs(r1, c1, r2, c2, 1);
+		dfs(r1, c1, r2, c2, 0);
 		if (result > 10 || result == Integer.MAX_VALUE)
 			System.out.println(-1);
 		else
@@ -72,7 +72,7 @@ public class Gold16197 {
 				continue;
 
 			if (ck == 1) {
-				result = Math.min(result, cnt);
+				result = Math.min(result, cnt + 1);
 				return;
 			}
 			if (map[nr1][nc1] == '#') {
