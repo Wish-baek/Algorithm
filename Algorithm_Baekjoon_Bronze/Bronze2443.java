@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Bronze2442 {
+public class Bronze2443 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
