@@ -32,15 +32,15 @@ public class Gold16509 {
 
 	static void bfs(int sangR, int sangC, int kingR, int kingC) {
 		boolean[][] visited = new boolean[10][9];
-		Queue<Object[]> q = new LinkedList<>();
-		q.add(new Object[] { sangR, sangC, 0, "" });
+		Queue<int[]> q = new LinkedList<>();
+		q.add(new int[] { sangR, sangC, 0 });
 		visited[sangR][sangC] = true;
 
 		while (!q.isEmpty()) {
-			Object[] arr = q.poll();
-			int r = (int) arr[0];
-			int c = (int) arr[1];
-			int cnt = (int) arr[2];
+			int[] arr = q.poll();
+			int r = arr[0];
+			int c = arr[1];
+			int cnt = arr[2];
 
 			if (r == kingR && c == kingC) {
 				result = cnt;
@@ -65,13 +65,12 @@ public class Gold16509 {
 						isPossible = false;
 						break;
 					}
-
 				}
 
 				if (isPossible) {
 					if (!visited[nr][nc]) {
 						visited[nr][nc] = true;
-						q.add(new Object[] { nr, nc, cnt + 1, (String) ((String) arr[3] + i) });
+						q.add(new int[] { nr, nc, cnt + 1 });
 					}
 				}
 			}
