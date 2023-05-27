@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Gold12887 {
+	
 	static char[][] map;
 	static int N, min;
 
