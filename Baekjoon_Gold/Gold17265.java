@@ -32,21 +32,22 @@ public class Gold17265 {
 
 		if (r == N - 1 && c == N - 1) {
 			int result = calc(exp);
-			max = Math.max(max, result);
-			min = Math.min(min, result);
+			// 식이 완성 되었다면
+			max = Math.max(max, result); // 최댓값 구하기
+			min = Math.min(min, result); // 최솟값 구하기
 			return;
 		}
 
 		int nr = r + 1;
-		if (nr >= 0 && nr < N)
+		if (nr >= 0 && nr < N) // 아래로 갈 수 있으면
 			dfs(nr, c, exp + map[nr][c]);
 
 		int nc = c + 1;
-		if (nc >= 0 && nc < N)
+		if (nc >= 0 && nc < N) // 오른쪽으로 갈 수 있으면
 			dfs(r, nc, exp + map[r][nc]);
 	}
 
-	static int calc(String exp) {
+	static int calc(String exp) { // 식 계산하기
 		int sum = exp.charAt(0) - '0';
 		char oper = ' ';
 		for (int i = 1; i < exp.length(); i++) {
