@@ -37,8 +37,10 @@ public class Gold10026 {
 				}
 			}
 		}
+		
 		check = true;
 		visited = new boolean[N][N];
+		
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				if (map[i][j] == 'R'&& !visited[i][j]) {
@@ -91,4 +93,5 @@ public class Gold10026 {
 		}
 	}
 }
+
 //https://www.acmicpc.net/problem/10026
