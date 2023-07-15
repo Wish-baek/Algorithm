@@ -65,4 +65,5 @@ public class Gold1022 {
 		System.out.println(sb);
 	}
 }
-//https://www.acmicpc.net/problem/1022
+
+// https://www.acmicpc.net/problem/1022
